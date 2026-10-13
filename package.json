@@ -1,0 +1,16 @@
+{
+  "name": "buffer-processor",
+  "description": "A buffer manager built in C++ for Node.js and Deno runtimes",
+  "main": "index.js",
+  "type": "module",
+  "license": "ISC",
+  "scripts": {
+    "compile": "cmake-js compile"
+  },
+  "dependencies": {
+    "node-addon-api": "^8.9.2"
+  },
+  "devDependencies": {
+    "cmake-js": "^8.0.0"
+  }
+}
