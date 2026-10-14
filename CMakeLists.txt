@@ -4,9 +4,11 @@ project(BufferProcessor)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 add_library(CoreProcessor STATIC src/processor.cpp)
 target_include_directories(CoreProcessor PUBLIC ${PROJECT_SOURCE_DIR}/include)
+set_target_properties(CoreProcessor PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
 if(MSVC)
     target_compile_options(CoreProcessor PRIVATE /O2 /W4)
